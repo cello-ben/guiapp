@@ -77,6 +77,6 @@ jobs:
     steps:
       - env:
           OUTPUT1: ${{ needs.build-mac.outputs.artifact_path }}
-        run: echo "$OUTPUT1"
+        run: echo $OUTPUT1
 
    
