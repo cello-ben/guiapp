@@ -75,8 +75,7 @@ jobs:
     if: ${{ startsWith(github.ref_name, 'v') }}
     runs-on: ubuntu-latest
     steps:
-      - env:
-          OUTPUT1: ${{ needs.build-mac.outputs.artifact_path }}
-        run: env
+      - name: print
+        run: echo toJSON(build-mac)
 
    
