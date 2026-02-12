@@ -1,14 +1,11 @@
 name: Build Linux
-
-on: push
-
+'on': push
 jobs:
-    build-linux:
-        runs-on: ubuntu-latest
-
-        steps:
-            - uses: actions/checkout@v4
-            - name: apt
-              run: sudo apt update && sudo apt upgrade && sudo apt install -y libsdl2-dev
-            - name: make
-              run: make
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: apt
+        run: sudo apt update && sudo apt upgrade && sudo apt install -y libsdl2-dev
+      - name: make
+        run: make
