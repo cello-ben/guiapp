@@ -1,0 +1,14 @@
+name: Build
+
+on: push
+
+jobs:
+    build-linux:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: apt
+              run: sudo apt update && sudo apt upgrade && sudo apt install -y libsdl2-dev && [![Build](https://github.com/cello-ben/guiapp/actions/workflows/build.yml/badge.svg)](https://github.com/cello
+            - name: make
+              run: make

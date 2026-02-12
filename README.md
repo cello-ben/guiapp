@@ -1,0 +1,1 @@
+[![Build](https://github.com/cello-ben/guiapp/actions/workflows/build.yml/badge.svg)](https://github.com/cello-ben/guiapp/actions/workflows/build.yml)
