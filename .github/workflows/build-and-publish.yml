@@ -30,6 +30,6 @@ jobs:
     steps:
       - env:
           OUTPUT1: ${{ needs.build-mac.outputs }}
-        run: echo "Artifact: $OUTPUT1"
+        run: echo "Artifact $OUTPUT1"
 
    
