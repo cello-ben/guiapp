@@ -8,9 +8,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
-
-	    - name: SDL2
-	      run: brew update && brew install sdl2
-	    
+            - name: SDL2
+              run: brew update && brew install sdl2
+	        
             - name: make
               run: make
