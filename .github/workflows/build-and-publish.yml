@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env:
-          OUTPUT1: ${{ needs.build-mac.outputs }}
-        run: echo $OUTPUT1
+          OUTPUT1: ${{ needs.build-mac.outputs.artifact_path }}
+        run: echo "$OUTPUT1"
 
    
