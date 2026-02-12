@@ -6,6 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: apt
-        run: sudo apt update && sudo apt upgrade && sudo apt install -y libsdl2-dev
-      - name: make
+        run: sudo apt update && sudo apt install -y libsdl2-dev
+      - name: make all
         run: make
+      - name: make clean
+        run: make clean
