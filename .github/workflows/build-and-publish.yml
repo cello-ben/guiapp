@@ -17,3 +17,20 @@ jobs:
         run: sudo apt update && sudo apt install -y libsdl2-dev
       - name: make all
         run: make
+      - name: zip
+        run: zip guiapp_linux.zip ./guiapp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guiapp_linux
+          path: ./guiapp_linux.zip
+  publish:
+    needs: build-mac
+    needs: build-linux
+    if: ${{ startsWith(github.event.repository.name, 'v') }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          OUTPUT1: ${{ needs.build-mac.outputs }}
+        run: echo "Artifact: $OUTPUT1"
+
+   
