@@ -24,8 +24,7 @@ jobs:
           name: guiapp_linux
           path: ./guiapp_linux.zip
   publish:
-    needs: build-mac
-    needs: build-linux
+    needs: [build-mac, build-linux]
     if: ${{ startsWith(github.event.repository.name, 'v') }}
     runs-on: ubuntu-latest
     steps:
