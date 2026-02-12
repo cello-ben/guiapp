@@ -1,0 +1,13 @@
+name: Build Mac
+
+on: push
+
+jobs:
+    build-mac:
+        runs-on: macos-26
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: make
+              run: make
